@@ -55,8 +55,6 @@ const MemoryGame = () => {
     setGameOver(false);
   };
 
-  console.log(grid, 'grid')
-
   return (
     <div className="memory-game mt-10 text-center">
       <h1 className="text-3xl font-bold mb-5">Memory Game</h1>

@@ -2,9 +2,6 @@ export const menuItems = [
   {
     name: "Home",
     key: "",
-    children: [
-      { name: "Resume.pdf", link: "/resume.pdf"  },
-    ],
   },
   {
     name: "Machine Coding",
