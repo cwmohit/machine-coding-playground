@@ -29,7 +29,7 @@ export default function UndoableCounter() {
   };
 
   return (
-    <div className="flex flex-col items-center p-6 space-y-4 bg-gray-100 min-h-screen">
+    <div className="flex flex-col items-center p-6 space-y-4 min-h-screen">
       <h1 className="text-3xl font-bold">Undoable Counter</h1>
       <div className="flex space-x-4">
         <button onClick={handleUndo} disabled={history.length === 0} className={`px-4 py-2 border ${history.length === 0 ? 'opacity-50' : 'bg-white'}`}>Undo</button>
@@ -40,7 +40,7 @@ export default function UndoableCounter() {
           <button
             key={value}
             onClick={() => handleAction(value)}
-            className="px-4 py-2 border bg-white shadow-sm hover:bg-gray-200"
+            className="px-4 py-2 border shadow-sm hover:bg-gray-200"
           >
             {value > 0 ? `+${value}` : value}
           </button>
@@ -48,7 +48,7 @@ export default function UndoableCounter() {
       </div>
       <div className="text-4xl font-bold">{count}</div>
       <h2 className="text-xl font-semibold">History</h2>
-      <div className="border p-4 w-64 bg-white shadow-md">
+      <div className="border p-4 w-64 shadow-md">
         {history.map((entry, index) => (
           <div key={index} className="text-sm">
             {entry.action > 0 ? `+${entry.action}` : entry.action} ({entry.before} → {entry.after})
