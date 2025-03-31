@@ -87,7 +87,7 @@ const CountdownTimer = () => {
       {!isStarted ? (
         <button
           onClick={startTimer}
-          className="px-10 py-2 border-2 rounded-2xl font-bold border-black bg-gray-900 sketch-button"
+          className="px-10 py-2 border-2 rounded-2xl font-bold  bg-gray-900 sketch-button"
         >
           Start
         </button>
@@ -95,13 +95,13 @@ const CountdownTimer = () => {
         <div className="flex gap-4">
           <button
             onClick={() => setIsRunning(!isRunning)}
-            className="px-10 py-2 border-2 rounded-2xl font-bold border-black bg-gray-900 sketch-button"
+            className="px-10 py-2 border-2 rounded-2xl font-bold  bg-gray-900 sketch-button"
           >
             {isRunning ? "Pause" : "Resume"}
           </button>
           <button
             onClick={resetTimer}
-            className="px-10 py-2 border-2 rounded-2xl font-bold border-black bg-gray-900 sketch-button"
+            className="px-10 py-2 border-2 rounded-2xl font-bold  bg-gray-900 sketch-button"
           >
             Reset
           </button>
