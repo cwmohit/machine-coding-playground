@@ -83,14 +83,14 @@ const Sidebar = ({ menuItems }) => {
 };
 
 const SidebarItem = ({ onSave, item, router, pathname }) => {
-  const isActivePath = pathname.includes(item.link || `/${item.key}`);
-  const [open, setOpen] = useState(isActivePath);
+  // const isActivePath = pathname.includes(item.link || `/${item.key}`);
+  const [open, setOpen] = useState(true);
   const [createFile, setCreateFile] = useState(false);
 
   // Ensure open state updates on pathname change
-  useEffect(() => {
-    setOpen(isActivePath);
-  }, [isActivePath]);
+  // useEffect(() => {
+  //   setOpen(isActivePath);
+  // }, [isActivePath]);
 
   return (
     <li>
