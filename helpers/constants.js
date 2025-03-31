@@ -18,7 +18,14 @@ export const menuItems = [
           { name: "Undoable counter", link: "/machine-coding/counters/undoable-counter" },
         ],
       },
-      { name: "Resume.pdf" },
+      {
+        name: "Games",
+        key: "games",
+        children: [
+          { name: "Memory Game", link: "/machine-coding/games/memory-game" },
+          { name: "Tic Tac Toe", link: "/machine-coding/games/tic-tac-toe" },
+        ],
+      },
     ],
   },
   {
