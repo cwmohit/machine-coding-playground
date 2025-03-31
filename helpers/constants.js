@@ -2,6 +2,7 @@ export const menuItems = [
   {
     name: "Home",
     key: "",
+    link: "/"
   },
   {
     name: "Machine Coding",
