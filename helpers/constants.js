@@ -31,6 +31,6 @@ export const menuItems = [
   {
     name: "Images",
     key: "images",
-    children: [{ name: "Vacation.png" }],
+    children: [{ name: "Mohit.png", link: "/images/mohit.png" }],
   },
 ];
