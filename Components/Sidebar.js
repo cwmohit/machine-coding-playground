@@ -39,7 +39,7 @@ const SidebarItem = ({ item, router, pathname }) => {
         ) : (
           <File size={16} />
         )}
-        <span className="font-medium">{item.name}</span>
+        <span className="font-medium truncate">{item.name}</span>
       </div>
       {item.children && open && (
         <ul className="ml-4 border-l border-gray-600 pl-2">

@@ -14,7 +14,7 @@ export const menuItems = [
         children: [
           { name: "CountDown Timer", link: "/machine-coding/counters/countdown-timer" },
           { name: "Undoable counter", link: "/machine-coding/counters/undoable-counter" },
-          { name: "Counter/StopWatch", link: "/machine-coding/counters/counter-stopwatch" },
+          { name: "StopWatch / Counter", link: "/machine-coding/counters/counter-stopwatch" },
         ],
       },
       {
