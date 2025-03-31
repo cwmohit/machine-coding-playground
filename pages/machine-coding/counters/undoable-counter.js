@@ -29,7 +29,7 @@ export default function UndoableCounter() {
   };
 
   return (
-    <div className="flex flex-col items-center p-6 space-y-4 min-h-screen">
+    <div className="flex flex-col items-center p-20 space-y-4 min-h-screen">
       <h1 className="text-3xl font-bold">Undoable Counter</h1>
       <div className="flex space-x-4">
         <button onClick={handleUndo} disabled={history.length === 0} className={`px-4 py-2 border ${history.length === 0 ? 'opacity-50' : 'bg-white'}`}>Undo</button>
