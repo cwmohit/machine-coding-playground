@@ -72,8 +72,8 @@ const MemoryGame = () => {
             return (
               <div
                 key={key}
-                className={`p-4 border cursor-pointer text-xl text-white text-center ${
-                  isRevealed ? "bg-white" : "bg-gray-600"
+                className={`p-4 border cursor-pointer text-xl text-center ${
+                  isRevealed ? "" : "bg-gray-600"
                 } ${matchedCards.includes(key) ? "invisible" : ""}`}
                 onClick={() => onCellClick(rowIndex, colIndex)}
               >
