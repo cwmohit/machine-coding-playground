@@ -20,7 +20,7 @@ const TicTacToeResult = ({
             key={index}
           >
             <div className="flex flex-col gap-1">
-              <p className="text-white font-semibold text-sm">
+              <p className="font-semibold text-sm">
                 Game {index + 1}
               </p>
               {game.time?.toLocaleTimeString()}
