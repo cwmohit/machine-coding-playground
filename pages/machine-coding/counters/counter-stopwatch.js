@@ -5,7 +5,7 @@ function Timer({ initialTime, mode, label }) {
   const { time, isRunning, start, stop, reset } = useTimer(initialTime, mode);
 
   return (
-    <div className="flex flex-col items-center text-white p-4 gap-3">
+    <div className="flex flex-col items-center p-4 gap-3">
       <h2 className="text-3xl font-bold">{label}</h2>
       <div className="text-5xl my-2">{time}s</div>
       <div className="flex gap-2">
