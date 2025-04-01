@@ -29,7 +29,7 @@ const DynamicEditor = () => {
 
   return (
     <div className="w-full min-h-screen p-10 flex flex-col gap-10">
-      <div className="flex justify-center items-center gap-10">
+      <div className="flex justify-between items-center gap-10">
         <h1 className="text-3xl font-bold text-center">Create Your Document</h1>
         <div className="flex justify-center">
           <button
