@@ -22,8 +22,8 @@ const DynamicEditor = () => {
     buttons: "bold,italic,underline,strikethrough,ul,ol,font,fontsize,paragraph,lineHeight,superscript,subscript,image,spellcheck,table,link,ai-assistant,indent,outdent",
     defaultMode: 1,
     toolbarAdaptive: false,
-    minHeight: 500,
-    maxHeight: 600,
+    minHeight: 600,
+    maxHeight: '100%',
     toolbarButtonSize: "small",
   };
 
@@ -40,7 +40,7 @@ const DynamicEditor = () => {
           </button>
         </div>
       </div>
-      <div className="w-full max-w-5xl mx-auto flex flex-col gap-8">
+      <div className="w-full max-w-full mx-auto flex flex-col gap-8">
         <JoditEditor
           value={content}
           config={config}
