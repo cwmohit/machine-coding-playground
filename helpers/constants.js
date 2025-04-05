@@ -25,6 +25,7 @@ export const menuItems = [
           { name: "Tic Tac Toe", link: "/machine-coding/games/tic-tac-toe" },
         ],
       },
+      { name: "Nested Checkbox", link: "/machine-coding/nested-checkbox" },
     ],
   },
   {
@@ -33,3 +34,56 @@ export const menuItems = [
     children: [{ name: "Mohit.png", link: "/images/mohit.png" }],
   },
 ];
+
+
+export const checkboxData = [
+  {
+    id: 1,
+    name: "Parent 1",
+    children: [
+      {
+        id: 1,
+        name: "Child 1.1",
+        children: [
+          { id: 1, name: "Child 1.1.1" },
+          { id: 2, name: "Child 1.1.2" },
+          {
+            id: 3,
+            name: "Child 1.1.3",
+            children: [
+              { id: 1, name: "Child 1.1.3.1" },
+              { id: 2, name: "Child 1.1.3.2" },
+              { 
+                id: 3,
+                name: "Child 1.1.3.3",
+                children: [
+                  { id: 1, name: "Child 1.1.3.3.1" },
+                  { 
+                    id: 2, 
+                    name: "Child 1.1.3.3.2",
+                    children: [
+                      { id: 1, name: "Child 1.1.3.3.2.1" },
+                      { id: 2, name: "Child 1.1.3.3.2.2" },
+                    ]
+                  },
+                  { id: 3, name: "Child 1.1.3.3.3" },
+                ]
+              },
+            ],
+          }
+        ],
+      },
+      { id: 2, name: "Child 1.2" },
+      { id: 3, name: "Child 1.3" },
+      {
+        id: 4,
+        name: "Child 1.4",
+        children: [
+          { id: 1, name: "Child 1.4.1" },
+          { id: 2, name: "Child 1.4.2" },
+          { id: 3, name: "Child 1.4.3" },
+        ],
+      }
+    ]
+  }
+]
