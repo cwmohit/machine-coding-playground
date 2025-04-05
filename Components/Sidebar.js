@@ -2,9 +2,10 @@ import React, { useEffect, useState } from "react";
 import { ChevronRight, ChevronDown, File } from "lucide-react";
 import { useRouter } from "next/router";
 import useLocalStorage from "@/hooks/useLocalStorage";
+const MENU_VERSION = 'v2.0';
 
 const Sidebar = ({ menuItems }) => {
-  const [menus, setMenus] = useLocalStorage('menus', menuItems);
+  const [menus, setMenus] = useLocalStorage(MENU_VERSION, menuItems);
   const [createFolder, setCreateFolder] = useState(false);
   const router = useRouter();
 
