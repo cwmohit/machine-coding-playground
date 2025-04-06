@@ -66,13 +66,19 @@ const Sidebar = ({ menuItems }) => {
       <div className="flex items-start gap-2">
         <button
           className="bg-blue-500 text-white px-4 py-2 mb-4 rounded text-sm"
-          onClick={() => setCreateFolder(true)}
+          onClick={() => {
+            setCreateFolder(true);
+            setCreateFile(false);
+          }}
         >
           + Add Folder
         </button>
         <button
           className="bg-blue-500 text-white px-4 py-2 mb-4 rounded text-sm"
-          onClick={() => setCreateFile(true)}
+          onClick={() => {
+            setCreateFile(true);
+            setCreateFolder(false);
+          }}
         >
           +
         </button>
