@@ -1,5 +1,5 @@
 import DynamicEditor from "@/Components/DynamicEditor";
-import { menuItems } from "@/helpers/constants";
+import { MENU_VERSION, menuItems } from "@/helpers/constants";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { parse } from "url";
@@ -43,7 +43,7 @@ export const flattenMenuItems = (items) => {
 };
 
 export const isValidPath = (reqPath) => {
-  const menus = window.localStorage.getItem("menus");
+  const menus = window.localStorage.getItem(MENU_VERSION);
   const storedMenus = menus ? JSON.parse(menus) : menuItems;
   const validPaths = flattenMenuItems(storedMenus);
   return validPaths.includes(reqPath);

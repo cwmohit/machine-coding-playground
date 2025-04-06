@@ -2,11 +2,12 @@ import React, { useEffect, useState } from "react";
 import { ChevronRight, ChevronDown, File } from "lucide-react";
 import { useRouter } from "next/router";
 import useLocalStorage from "@/hooks/useLocalStorage";
-const MENU_VERSION = 'v2.0';
+import { MENU_VERSION } from "@/helpers/constants";
 
 const Sidebar = ({ menuItems }) => {
   const [menus, setMenus] = useLocalStorage(MENU_VERSION, menuItems);
   const [createFolder, setCreateFolder] = useState(false);
+  const [createFile, setCreateFile] = useState(false);
   const router = useRouter();
 
   function onSave(key, newValue) {
@@ -43,30 +44,49 @@ const Sidebar = ({ menuItems }) => {
     router.push(newRoute);
   }  
 
-  const onSaveFolderInRoot = (value) => {
+  const onSaveInRoot = (value, type) => {
      const newKey = value.toLowerCase().split(" ").join("-");
      setMenus((prevMenus) => [...prevMenus,
       {
         name: value,
         key: newKey,
-        children: []
+        ...(type === 'file' ? {
+          link: `/${newKey}`,
+        } : {
+          children: []
+        })
       }
     ]);
+
+    if(type === 'file') router.push(`/${newKey}`);
   }
 
   return (
     <div className="min-w-64 bg-gray-900 text-white h-screen p-4 col-span-2 xl:col-span-1">
-      <button
-        className="bg-blue-500 text-white px-4 py-2 mb-4 rounded"
-        onClick={() => setCreateFolder(true)}
-      >
-        + Add Folder
-      </button>
-      {createFolder ? <FileEditor onSave={(value) => {
+      <div className="flex items-start gap-2">
+        <button
+          className="bg-blue-500 text-white px-4 py-2 mb-4 rounded text-sm"
+          onClick={() => setCreateFolder(true)}
+        >
+          + Add Folder
+        </button>
+        <button
+          className="bg-blue-500 text-white px-4 py-2 mb-4 rounded text-sm"
+          onClick={() => setCreateFile(true)}
+        >
+          +
+        </button>
+      </div>
+      {createFolder || createFile ? <FileEditor onSave={(value) => {
         if(value){
-          onSaveFolderInRoot(value);
+          if(createFile){
+            onSaveInRoot(value, 'file');
+          }else{
+            onSaveInRoot(value, 'folder');
+          }
+          setCreateFile(false);
+          setCreateFolder(false);
         }
-        setCreateFolder(false);
       }} /> : null}
       <ul>
         {menus.map((item, index) => (

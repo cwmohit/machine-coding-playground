@@ -87,3 +87,6 @@ export const checkboxData = [
     ]
   }
 ]
+
+
+export const MENU_VERSION = 'v2.0';
