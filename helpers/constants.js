@@ -18,6 +18,13 @@ export const menuItems = [
         ],
       },
       {
+        name: "Search",
+        key: "search",
+        children: [
+          { name: "Auto-complete", link: "/machine-coding/search/search-bar" },
+        ],
+      },
+      {
         name: "Games",
         key: "games",
         children: [
@@ -89,4 +96,4 @@ export const checkboxData = [
 ]
 
 
-export const MENU_VERSION = 'v2.0';
+export const MENU_VERSION = 'v2.1';

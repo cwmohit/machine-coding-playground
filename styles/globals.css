@@ -42,3 +42,7 @@ iframe {
 .jodit-react-container{
   color: black!important;
 }
+
+.suggestion-list .suggestion-item[aria-selected="true"]{
+   @apply bg-gray-500;
+}
